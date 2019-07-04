@@ -9,10 +9,3 @@ cache: pip
 install: pip install pylint
 
 script: find src -type f | sed -r 's|/[^/]+$||' | sort | uniq | xargs pylint
-
-notifications:
-  email:
-    recipients:
-      - $elemental_email
-    on_success: never
-    on_failure: always

@@ -1,0 +1,11 @@
+dist: xenial
+
+language: python
+
+python: 3.7
+
+cache: pip
+
+install: pip install pylint
+
+script: find src -type f | sed -r 's|/[^/]+$||' | sort | uniq | xargs pylint
